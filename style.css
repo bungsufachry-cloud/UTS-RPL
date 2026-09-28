@@ -1,0 +1,197 @@
+:root {
+    --bg-color: #e0e0e0;
+    --card-bg: #c8c8c8;
+    --text-color: #000000;
+    --primary-color: #181718;
+    --border-color: #000000;
+    --progress-bg: #999999;
+}
+
+body.dark-mode {
+    --bg-color: #000000;
+    --card-bg: #080808;
+    --text-color: #ffffff;
+    --primary-color: #f4eff0;
+    --border-color: #ffffff;
+    --progress-bg: #222222;
+}
+
+body {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--bg-color);
+    background-image: url(123.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: var(--text-color);
+    margin: 0;
+    padding: 20px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+header {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.profile-info {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.avatar {
+    width: 70px;
+    height: 70px;
+    background-color: #bbb;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+}
+
+.avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+}
+
+nav {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+nav a {
+    color: var(--text-color);
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: 1px solid var(--border-color);
+}
+
+#btn-theme {
+    cursor: pointer;
+    padding: 6px 12px;
+    border-radius: 5px;
+    background-color: #c8c8c8;
+    color: #000000;
+    border: 2px solid #000000;
+}
+
+/* Dark Mode */
+body.dark-mode #btn-theme {
+    background-color: #000000;
+    color: #ffffff;
+    border: 2px solid #ffffff;
+}
+
+.main-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    align-items: start;
+}
+
+.left-column {
+    grid-column: 1;
+}
+
+.right-column {
+    grid-column: 2;
+}
+
+.card {
+    background-color: var(--card-bg);
+    color: var(--text-color);
+    border: 2px solid var(--border-color);
+    border-top: 5px solid var(--primary-color);
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.card h2 {
+    margin-top: 0;
+    color: var(--text-color);
+    border-bottom: 2px solid var(--border-color);
+    padding-bottom: 5px;
+}
+
+.skill-item {
+    margin-bottom: 15px;
+}
+
+.skill-name {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.progress-bar {
+    background-color: var(--progress-bg);
+    border-radius: 10px;
+    height: 12px;
+    overflow: hidden;
+}
+
+.progress-fill {
+    background-color: var(--primary-color);
+    height: 100%;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-group input, .form-group textarea {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+.btn-submit {
+    background-color: #ffffff !important;
+    color: #000000 !important;
+    border: 2px solid #000000;
+}
+
+/* Saat Dark Mode */
+body.dark-mode .btn-submit {
+    background-color: #000000 !important;
+    color: #ffffff !important;
+    border: 2px solid #ffffff;
+}
+
+.alert-succes {
+    background-color: #d4edda;
+    color: #155724;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
