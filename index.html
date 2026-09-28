@@ -5,8 +5,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['btn_kirim'])) {
     $email = htmlspecialchars($_POST['txt_email']);
     $pesan = htmlspecialchars($_POST['pesan']);
 
-    if (!empty($nama) && !empty($email) && !empty($pesan)) {
-        $pesan_status = "<div class='alert-succes'> <strong></strong>,</div>";
 
     }
 }
